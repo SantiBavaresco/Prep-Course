@@ -10,14 +10,26 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
+  return aux=(Object.entries(objeto));
 }
 
 
 function numberOfCharacters(string) {
   //La función recibe un string. Recorre el srting y devuelve el caracter con el número de veces que aparece 
-  //en formato par clave-valor.
+  //en formato par clave-valor. 
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
+  const stringtoarray=[];
+  const counts = {};
+   
+  for(i=0; i<string.length; i++){
+    stringtoarray.push(string[i]);
+  }
+  stringtoarray.sort();
+
+  stringtoarray.forEach(function (x) { counts[x] = (counts[x] || 0) + 1; });
+  return counts;
+
 }
 
 
@@ -26,6 +38,20 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
+  const aux = s.toLowerCase();
+  const auxUPPER= ""; 
+  const auxLOWER= "";
+
+  for(i=0; i < s.length; i++){
+    if(s.charAt(i)===aux.charAt(i)){
+      auxLOWER.concat("",aux[i]);
+    }
+    else if(s[i]!==aux[i]){
+      auxUPPER.concat("",s[i]);
+    }
+  }
+  return auxUPPER.concat(auxLOWER);
+
 }
 
 
