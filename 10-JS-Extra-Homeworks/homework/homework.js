@@ -43,7 +43,7 @@ function capToFront(s) {
   const auxLOWER= "";
 
   for(i=0; i < s.length; i++){
-    if(s.charAt(i)===aux.charAt(i)){
+    if(s.charAt(i)==aux.charAt(i)){
       auxLOWER.concat("",aux[i]);
     }
     else if(s[i]!==aux[i]){
